@@ -29,7 +29,11 @@ namespace WpfApp1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            //if((sender as Button).Content=="1")
+            if((sender as Button).Content=="+")
+            {
+                Calculate.a=float.Parse()
+            }
+
             a += (sender as Button).Content;
             TEXTBOX.Text = a;
 

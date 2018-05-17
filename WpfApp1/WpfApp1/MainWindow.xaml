@@ -37,6 +37,6 @@
         <Button Content="*" Grid.Column="4" Grid.Row="3" Click="Button_Click"></Button>
         <Button Content="/" Grid.Column="4" Grid.Row="4" Click="Button_Click"></Button>
         <TextBox Name="TEXTBOX" Grid.Column="0" Grid.ColumnSpan="4" FontSize="28" IsEnabled="False" TextAlignment="Right"></TextBox>
-        
+        <Label Name="label" Grid.Column="0" Grid.Row="0" FontSize="28" ></Label>
     </Grid>
 </Window>
