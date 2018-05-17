@@ -15,7 +15,7 @@ namespace WpfApp1
         {
             switch(ch)
             {
-                case 1:
+                case '+':
 
                     break;
             }
