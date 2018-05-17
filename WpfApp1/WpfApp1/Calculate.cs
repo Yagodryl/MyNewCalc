@@ -26,14 +26,15 @@ namespace WpfApp1
                     c = a * b;
                     break;
                 case '/':
+                    if(b==0)
+                    {
+                        return 0;
+                    }
                     c = a / b;
-                    break;
-                case '=':
-                    return c;
                     break;
                    
             }
-            return 0;
+            return c;
         }
     }
 }
