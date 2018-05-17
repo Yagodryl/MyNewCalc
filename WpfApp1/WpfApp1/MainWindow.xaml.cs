@@ -20,7 +20,9 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        string a;
+        string A;
+        Calculate Cl = new Calculate();
+        char z;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,14 +30,30 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            if((sender as Button).Content=="+")
+            if (label.Content == "")
             {
-                Calculate.a=float.Parse()
+                if ((sender as Button).Content == "+"|| (sender as Button).Content == "-"|| (sender as Button).Content == "-"|| (sender as Button).Content == "-")
+                {
+                    Cl.a = float.Parse(A);
+                    Cl.ch = (char)(sender as Button).Content;
+                    label.Content = A + (sender as Button).Content;
+                    A = "";
+                    TEXTBOX.Text = "";
+                }
+            }
+            else
+            {
+                if ((sender as Button).Content=="=")
+                {
+                    Cl.b = float.Parse(TEXTBOX.Text);
+                    label.Content+= TEXTBOX.Text;
+                    TEXTBOX.Text = "=" + Cl.Return_Res();
+                }
+
             }
 
-            a += (sender as Button).Content;
-            TEXTBOX.Text = a;
+            A += (sender as Button).Content;
+            TEXTBOX.Text = A;
 
 
         }
