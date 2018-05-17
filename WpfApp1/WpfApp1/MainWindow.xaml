@@ -30,7 +30,7 @@
         <Button Content="8" Grid.Column="1" Grid.Row="1" Click="Button_Click"></Button>
         <Button Content="9" Grid.Column="2" Grid.Row="1" Click="Button_Click"></Button>
         <Button Content="0" Grid.Column="1" Grid.Row="4" Click="Button_Click"></Button>
-        <Button Content="C" Grid.Column="0" Grid.Row="4" Click="Button_Click"></Button>
+        <Button Content="C" Grid.Column="0" Grid.Row="4" Click="Button_Click_1"></Button>
         <Button Content="=" Grid.Column="2" Grid.Row="4" Click="Button_Click"></Button>
         <Button Content="+" Grid.Column="4" Grid.Row="1" Click="Button_Click"></Button>
         <Button Content="-" Grid.Column="4" Grid.Row="2" Click="Button_Click"></Button>
