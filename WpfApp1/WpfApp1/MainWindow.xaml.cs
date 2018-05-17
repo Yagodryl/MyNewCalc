@@ -22,7 +22,7 @@ namespace WpfApp1
     {
         string A;
         Calculate Cl = new Calculate();
-        char z;
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -30,30 +30,43 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (label.Content == "")
+            if (label.Text == "")
             {
-                if ((sender as Button).Content == "+"|| (sender as Button).Content == "-"|| (sender as Button).Content == "*"|| (sender as Button).Content == "/")
+                //MessageBox.Show((sender as Button).Content.ToString());
+                if ((sender as Button).Content.ToString() == "+"|| (sender as Button).Content.ToString() == "-"|| (sender as Button).Content.ToString() == "*"|| (sender as Button).Content.ToString() == "/")
                 {
+                   // MessageBox.Show("edesf");
                     Cl.a = float.Parse(A);
-                    Cl.ch = (char)(sender as Button).Content;
-                    label.Content = A + (sender as Button).Content;
+                    Cl.ch = (sender as Button).Content.ToString()[0];
+                    label.Text = A + (sender as Button).Content.ToString();
                     A = "";
                     TEXTBOX.Text = "";
+                }
+                else
+                {
+                    A += (sender as Button).Content;
+                    TEXTBOX.Text = A;
                 }
             }
             else
             {
-                if ((sender as Button).Content=="=")
+                
+                if ((sender as Button).Content.ToString() == "=")
                 {
                     Cl.b = float.Parse(TEXTBOX.Text);
-                    label.Content+= TEXTBOX.Text;
+                    label.Text+= TEXTBOX.Text;
                     TEXTBOX.Text = "=" + Cl.Return_Res();
+                }
+                else
+                {
+                    A += (sender as Button).Content;
+                    TEXTBOX.Text = A;
                 }
 
             }
 
-            A += (sender as Button).Content;
-            TEXTBOX.Text = A;
+           // A += (sender as Button).Content;
+            //TEXTBOX.Text = A;
 
 
         }
