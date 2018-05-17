@@ -36,7 +36,7 @@
         <Button Content="-" Grid.Column="4" Grid.Row="2" Click="Button_Click"></Button>
         <Button Content="*" Grid.Column="4" Grid.Row="3" Click="Button_Click"></Button>
         <Button Content="/" Grid.Column="4" Grid.Row="4" Click="Button_Click"></Button>
-        <TextBox Name="TEXTBOX" Grid.Column="0" Grid.ColumnSpan="4" FontSize="24" IsEnabled="False" TextAlignment="Right"></TextBox>
+        <TextBox Name="TEXTBOX" Grid.Column="0" Grid.ColumnSpan="4" FontSize="28" IsEnabled="False" TextAlignment="Right"></TextBox>
         
     </Grid>
 </Window>
