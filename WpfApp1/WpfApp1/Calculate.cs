@@ -11,15 +11,30 @@ namespace WpfApp1
         public float a { get; set; }
         public float b { get; set; }
         public char ch { get; set; }
+        public float c { get; set; }
       public float Return_Res()
         {
             switch(ch)
             {
                 case '+':
-
+                    c = a + b;
                     break;
+                case '-':
+                    c = a - b;
+                    break;
+                case '*':
+                    c = a * b;
+                    break;
+                case '/':
+                    if(b==0)
+                    {
+                        return 0;
+                    }
+                    c = a / b;
+                    break;
+                   
             }
-            return 0;
+            return c;
         }
     }
 }

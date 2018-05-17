@@ -32,7 +32,7 @@ namespace WpfApp1
         {
             if (label.Content == "")
             {
-                if ((sender as Button).Content == "+"|| (sender as Button).Content == "-"|| (sender as Button).Content == "-"|| (sender as Button).Content == "-")
+                if ((sender as Button).Content == "+"|| (sender as Button).Content == "-"|| (sender as Button).Content == "*"|| (sender as Button).Content == "/")
                 {
                     Cl.a = float.Parse(A);
                     Cl.ch = (char)(sender as Button).Content;
